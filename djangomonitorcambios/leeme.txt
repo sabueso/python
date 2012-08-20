@@ -1,0 +1,21 @@
+Monitor de cambios en proyectos de Django
+-------------------------------------------
+
+1-Agregar el directorio dentro de los directorios a monitorizar
+2-Crear dentro de cada directorio de proyecto el directorio apache/ y dentro
+el fichero django.stock (que ha de ser la copia del fichero django.wsgi)
+3-Lanzar el script en segundo plano, o via screen con "screen -d -m"
+
+Cada ves que via inotify , se detecte el salvado de algun fichero dentro
+de los directorios monitorizados (el script es recursivo) , copia
+el fichero django.stock sobre django.wsgi, con lo que el proyecto
+se recargar , y se podra trabajar en un entorno de desarrollo remoto
+de tal manera que cada cambio se vea reflejado al instante.
+
+Advertencia: esto es un round-up a la problematica de tener
+un servidor de desarrollo de Django en remoto, y no querer
+tener que recargar constantemente los cambios, y tampoco utilizar
+el server interno de Django (que muchas veces depende para que puede
+ser incomodo)
+
+Copyleft: Ramiro Magallanes (sabueso@sabueso.org)

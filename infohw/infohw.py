@@ -12,18 +12,23 @@ import os
 posicion=0
 #Agregar el comando en formato "etiqueta"->"comando"
 comandos=	[
+		['Kernel',"uname -a"],
 		['Actividad',"uptime"],
 		['CPU',"cat /proc/cpuinfo|grep -E '(name|processor)'"],
 		['Memoria',"free -mo"],
 		['Direccionamiento IP',"ip addres show |grep -E '(state|inet)'|grep -v inet6"],
+		['Enrutamiento',"ip route show"],
+		['Puntos de montaje',"mount"],
+		['Espacio libre',"df -hP"],
 		]
 
 #print len(comandos)
 while posicion < len(comandos):
+	print "------------------------------------------------------------------------------"
 	print comandos[posicion][0]
-	print "---------------------------------------"
+	print "------------------------------------------------------------------------------"
 	os.system(""+comandos[posicion][1]+"")
-	print "\n"
+	print "\r"
 	posicion=posicion+1
 #
 

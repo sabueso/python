@@ -18,14 +18,15 @@ comandos=	[
 		['Memoria',"free -mo"],
 		['Direccionamiento IP',"ip addres show |grep -E '(state|inet)'|grep -v inet6"],
 		['Enrutamiento',"ip route show"],
+		#['Particionado',"fdisk -l"],
 		['Puntos de montaje',"mount"],
-		['Espacio libre',"df -hP"],
+		['Espacio libre',"df -Ph"],
 		['10 Procesos con mas carga: CPU,MEM ..',"ps -A -o %cpu,%mem,euser,ucmd --sort=pcpu|tail -n10"]
 		]
 
 #print len(comandos)
 while posicion < len(comandos):
-	print "------------------------------------------------------------------------------"
+#	print "------------------------------------------------------------------------------"
 	print comandos[posicion][0]
 	print "------------------------------------------------------------------------------"
 	os.system(""+comandos[posicion][1]+"")

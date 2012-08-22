@@ -20,6 +20,7 @@ comandos=	[
 		['Enrutamiento',"ip route show"],
 		['Puntos de montaje',"mount"],
 		['Espacio libre',"df -hP"],
+		['10 Procesos con mas carga: CPU,MEM ..',"ps -A -o %cpu,%mem,euser,ucmd --sort=pcpu|tail -n10"]
 		]
 
 #print len(comandos)

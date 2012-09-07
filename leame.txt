@@ -1,5 +1,5 @@
 #######
 #Repositorio de codigo en Python, algo de lo que he ido programando
-#y por un motivo u otro no he querido perder ;)
-#Si podeis reutilizar algo , genial!
+#y por un motivo u otro no he querido perder =)
+#Si podeis reutilizar algo , genial! 
 ######

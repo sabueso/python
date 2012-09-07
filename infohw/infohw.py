@@ -14,6 +14,7 @@ posicion=0
 comandos=	[
 		['Kernel',"uname -a"],
 		['Actividad',"uptime"],
+		['Placa Base',"dmidecode -t 2"],
 		['CPU',"cat /proc/cpuinfo|grep -E '(name|processor)'"],
 		['Memoria',"free -mo"],
 		['Direccionamiento IP',"ip addres show |grep -E '(state|inet)'|grep -v inet6"],
@@ -33,7 +34,7 @@ while posicion < len(comandos):
 	print comandos[posicion][0]
 	print "------------------------------------------------------------------------------"
 	os.system(""+comandos[posicion][1]+"")
-	print "\r"
+	print "\n"
 	posicion=posicion+1
 #
 
